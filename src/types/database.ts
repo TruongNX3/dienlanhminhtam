@@ -15,6 +15,9 @@ export interface Database {
           name: string
           slug: string
           icon: string | null
+          status: boolean
+          created_by: string | null
+          updated_by: string | null
           created_at: string
         }
         Insert: {
@@ -22,6 +25,9 @@ export interface Database {
           name: string
           slug: string
           icon?: string | null
+          status?: boolean
+          created_by?: string | null
+          updated_by?: string | null
           created_at?: string
         }
         Update: {
@@ -29,6 +35,9 @@ export interface Database {
           name?: string
           slug?: string
           icon?: string | null
+          status?: boolean
+          created_by?: string | null
+          updated_by?: string | null
           created_at?: string
         }
       }
@@ -44,6 +53,8 @@ export interface Database {
           specs: Json
           status: boolean
           is_featured: boolean
+          created_by: string | null
+          updated_by: string | null
           category_id: string
           created_at: string
         }
@@ -58,6 +69,8 @@ export interface Database {
           specs?: Json
           status?: boolean
           is_featured?: boolean
+          created_by?: string | null
+          updated_by?: string | null
           category_id: string
           created_at?: string
         }
@@ -72,6 +85,8 @@ export interface Database {
           specs?: Json
           status?: boolean
           is_featured?: boolean
+          created_by?: string | null
+          updated_by?: string | null
           category_id?: string
           created_at?: string
         }
