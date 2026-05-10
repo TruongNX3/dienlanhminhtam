@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Globe, Clock, Facebook, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, Clock, MessageCircle } from 'lucide-react';
 import { useSettings } from '@/hooks/use-settings';
 
 const Footer = () => {
