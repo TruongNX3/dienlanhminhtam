@@ -642,7 +642,7 @@ export default function AdminProductsPage() {
                             )}
                           </div>
                           <div className="min-w-0 py-1">
-                            <p className="font-extrabold text-slate-900 leading-tight mb-0.5 flex items-center gap-2">{p.name}{p.is_featured && <Star size={12} className="text-yellow-500 fill-current" title="Sản phẩm nổi bật" />}{!p.status && <span className="text-[10px] bg-slate-200 text-slate-500 px-1.5 py-0.5 rounded-md uppercase tracking-tighter font-black">Ẩn</span>}</p>
+                            <p className="font-extrabold text-slate-900 leading-tight mb-0.5 flex items-center gap-2">{p.name}{p.is_featured && <span title="Sản phẩm nổi bật"><Star size={12} className="text-yellow-500 fill-current" /></span>}{!p.status && <span className="text-[10px] bg-slate-200 text-slate-500 px-1.5 py-0.5 rounded-md uppercase tracking-tighter font-black">Ẩn</span>}</p>
                             <div className="flex flex-col gap-0.5">
                               <div className="flex items-center gap-1.5 text-[10px] text-slate-400 font-bold uppercase tracking-tighter">
                                 <Clock size={10} /> {formatDate(p.created_at)}
