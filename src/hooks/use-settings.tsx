@@ -17,7 +17,10 @@ const defaultStoreInfo: StoreInfo = {
   about: "Chuyên mua bán, sửa chữa máy lạnh, tủ lạnh, máy giặt uy tín tại Ninh Bình.",
   warranty_policy: "Bảo hành chính hãng 12-24 tháng tùy dòng sản phẩm.",
   zalo: "0817.751.946",
-  working_hours: "7h00 - 20h00 hàng ngày"
+  working_hours: "7h00 - 20h00 hàng ngày",
+  main_banner: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=1200",
+  sub_banner_1: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=800",
+  sub_banner_2: "https://images.unsplash.com/photo-1581092921461-7d6570975896?auto=format&fit=crop&q=80&w=800"
 };
 
 const SettingsContext = createContext<SettingsContextType>({
