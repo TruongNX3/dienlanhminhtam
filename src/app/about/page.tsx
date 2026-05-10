@@ -7,6 +7,10 @@ import { useSettings } from '@/hooks/use-settings';
 export default function AboutPage() {
   const { storeInfo, loading } = useSettings();
 
+  React.useEffect(() => {
+    document.title = "Giới thiệu | Điện Lạnh Minh Tâm";
+  }, []);
+
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Hero Section */}

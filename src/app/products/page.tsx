@@ -23,6 +23,11 @@ const ITEMS_PER_PAGE = 12;
 
 function ProductsContent() {
   const router = useRouter();
+  
+  useEffect(() => {
+    document.title = "Sản phẩm | Điện Lạnh Minh Tâm";
+  }, []);
+
   const searchParams = useSearchParams();
   const searchKeyword = searchParams.get('search') || '';
   const categoryParam = searchParams.get('category') || 'Tất cả';

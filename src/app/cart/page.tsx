@@ -13,6 +13,10 @@ export default function CartPage() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isOrderSuccess, setIsOrderSuccess] = useState(false);
 
+  React.useEffect(() => {
+    document.title = "Giỏ hàng | Điện Lạnh Minh Tâm";
+  }, []);
+
   // Màn hình thành công
   if (isOrderSuccess) {
     return (

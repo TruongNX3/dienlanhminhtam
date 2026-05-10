@@ -26,6 +26,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
     fetchProduct();
   }, [productId]);
 
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.name} | Điện Lạnh Minh Tâm`;
+    }
+  }, [product]);
+
   const fetchProduct = async () => {
     try {
       setLoading(true);

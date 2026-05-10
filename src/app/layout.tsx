@@ -1,43 +1,32 @@
-'use client';
-
-import React from 'react';
-import { usePathname } from 'next/navigation';
+import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import Snowfall from "@/components/snowfall";
-import { SettingsProvider } from "@/hooks/use-settings";
+import RootLayoutClient from "@/components/root-layout-client";
 
 const modernFont = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin", "vietnamese"],
 });
 
+export const metadata: Metadata = {
+  title: "Điện Lạnh Minh Tâm - Máy Lạnh Chính Hãng Giá Rẻ Ninh Bình",
+  description: "Điện Lạnh Minh Tâm chuyên cung cấp, lắp đặt, sửa chữa máy lạnh, tủ lạnh, máy giặt uy tín tại Ninh Bình.",
+  keywords: "điện lạnh ninh bình, máy lạnh ninh bình, sửa máy lạnh, mua máy lạnh giá rẻ",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isAdminPath = pathname?.startsWith('/admin');
-
   return (
     <html lang="vi" suppressHydrationWarning>
       <body
         className={`${modernFont.variable} antialiased min-h-screen flex flex-col text-[17px] md:text-[19px] leading-relaxed`}
       >
-        <SettingsProvider>
-          <ThemeProvider>
-            {!isAdminPath && <Snowfall />}
-            {!isAdminPath && <Navbar />}
-            <main className={`${!isAdminPath ? 'flex-grow pt-[72px] md:pt-[88px]' : 'h-screen'}`}>
-              {children}
-            </main>
-            {!isAdminPath && <Footer />}
-          </ThemeProvider>
-        </SettingsProvider>
+        <RootLayoutClient>
+          {children}
+        </RootLayoutClient>
       </body>
     </html>
   );

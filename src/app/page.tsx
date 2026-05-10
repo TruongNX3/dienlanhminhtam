@@ -16,6 +16,11 @@ import { cn } from '@/lib/utils';
 export default function Home() {
   const { addItem } = useCart();
   const { storeInfo, loading: settingsLoading } = useSettings();
+
+  useEffect(() => {
+    document.title = "Điện Lạnh Minh Tâm - Máy Lạnh Chính Hãng Giá Rẻ Ninh Bình";
+  }, []);
+
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [featuredProducts, setFeaturedProducts] = useState<any[]>([]);

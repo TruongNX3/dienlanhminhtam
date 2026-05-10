@@ -35,6 +35,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const { storeInfo } = useSettings();
 
   useEffect(() => {
+    // Update document title for Admin
+    const currentPage = sidebarItems.find(item => item.href === pathname)?.label || 'Quản trị';
+    document.title = `${currentPage} | Admin - Điện Lạnh Minh Tâm`;
+
     const checkUser = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session && pathname !== '/admin/login') {

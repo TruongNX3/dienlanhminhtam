@@ -13,6 +13,11 @@ import { cn } from '@/lib/utils';
 export default function ContactPage() {
   const { storeInfo, loading: settingsLoading } = useSettings();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  React.useEffect(() => {
+    document.title = "Liên hệ | Điện Lạnh Minh Tâm";
+  }, []);
+
   const [isSuccess, setIsSuccess] = useState(false);
   const [isDuplicate, setIsDuplicate] = useState(false);
   const [toast, setToast] = useState<{ message: string; type: ToastType; isVisible: boolean }>({
