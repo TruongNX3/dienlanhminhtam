@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+Disallow: /admin/*
+
+# Host
+Host: https://dienlanhminhtam.com
+
+# Sitemaps
+Sitemap: https://dienlanhminhtam.com/sitemap.xml
